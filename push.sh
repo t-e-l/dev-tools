@@ -7,7 +7,7 @@ if [ $userinput != Y ] && [ $userinput != y ] ; then
 fi
 echo 'commiting new TEL work'
 cd ~/projects/tel/bootstrap
-./build_changes.sh && echo 'built changes.zip'
+./build_changes.sh 
 git add changes.zip
 echo 'added changes.zip'
 echo 'Commit message?'
