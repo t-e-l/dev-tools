@@ -1,5 +1,16 @@
 # dev-tools
-Tools for development - set of scripts to minimize typing
+.____________________.
+|   ______________   |
+|  /_  __/ ____/ /   |
+|   / / / __/ / /    |
+|  / / / /___/ /___  |
+| /_/ /_____/_____/  |
+|  ________________  |
+|-->  Developers  <--|
+|  ----------------  |
+'--------------------' 
+
+utilities to minimize typing when writing code for the TEL project.
 
 setup - run to setup repo clone / reset current clone 
 - setup.sh will clone the: t-e-l/tel repo into your: ~/projects/tel/
