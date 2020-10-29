@@ -7,6 +7,7 @@ if [ $userinput != Y ] && [ $userinput != y ] ; then
 	return 88
 fi
 echo 'commiting new TEL work'
+cwd=$(pwd)
 cd ~/projects/tel/bootstrap
 ./build_changes.sh 
 git add changes.zip
@@ -15,3 +16,4 @@ echo 'Commit message?'
 read commit_msg
 git commit -m "$commit_msg"
 git push
+cd $cwd
