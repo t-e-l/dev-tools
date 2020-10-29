@@ -14,7 +14,7 @@ error() {
 
 cat ~/projects/dev-tools/banner.txt
 #files_changed=$(git diff --shortstat --name-only --exit-code)
-files_changed=$(git status --untracked-files=no)
+files_changed=$(git status --short --untracked-files=no)
 
 retVal=$?
 if [ -z $files_changed ]; then
@@ -28,7 +28,7 @@ else
 fi
 
 echo '---------------------'
-prompt 'Please confirm all files you wish to add are here? y/N'
+prompt 'Please confirm all files you wish to add are listed as M without a prepended space? y/N'
 read userinput || return 88
 if [ $userinput != Y ] && [ $userinput != y ] ; then
 	error 'Please finish adding files, then re-run'
