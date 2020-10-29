@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cat ~/projects/dev-tools/banner.txt
 echo 'have you finished added all new files? Y/n'
 read userinput
 if [ $userinput != Y ] && [ $userinput != y ] ; then
