@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 cat ~/projects/dev-tools/banner.txt
-git diff --shortstat --name-only --exit-code
-echo 'have you added all new files? y/N'
-read userinput
+echo '~ Files changed:'
+echo '---------------------'
+git diff --shortstat --name-only --exit-code && (echo 'none! - exiting' && exit 1)
+echo '---------------------'
+echo 'confirm all files you wish to add are here? y/N'
+read userinput && return 88
 if [ $userinput != Y ] && [ $userinput != y ] ; then
 	echo 'finish adding files before re-running'
 	return 88
