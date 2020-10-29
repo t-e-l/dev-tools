@@ -44,6 +44,7 @@ fi
 cd ~/projects/dev-tools
 chmod +x push.sh
 chmod +x pull.sh
+chmod +x changes.sh
 if [ -f ~/projects ]; then
 	mkdir ~/projects
 else
@@ -61,5 +62,5 @@ read userinput
 if [ $userinput != 'y' ] && [ $userinput != 'Y'] ; then
 	exit 0
 fi
-echo -e "### TEL DEV ### \nalias tel-push='source ~/projects/dev-tools/push.sh' \nalias tel-pull='source ~/projects/dev-tools/pull.sh' \n### END TEL ###" >> ~/.profile && echo 'added to .profile'
+echo -e "### TEL DEV ### \nalias tel-push='source ~/projects/dev-tools/push.sh' \nalias tel-pull='source ~/projects/dev-tools/pull.sh' \nalias tel-changes='source ~/projects/dev-tools/changes.sh' \n### END TEL ###" >> ~/.profile && echo 'added to .profile'
 source ~/.profile
