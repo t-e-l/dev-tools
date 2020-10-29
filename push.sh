@@ -49,6 +49,6 @@ if [ -z commit_msg ] ; then
 fi
 git commit -m "$commit_msg"
 git push
-git whatchanged
+#git whatchanged
 cd $cwd #restore dir 
 
